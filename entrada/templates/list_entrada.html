@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block product %}
+<p>
+    <a class="button is-primary" href="{% url 'index' %}">Início</a>
+    <a class="button is-primary" href="{% url 'produto:list_produto' %}">Lista de Produtos</a> <br><br>
+    <h1>Entrada</h1> 
+    <a class="button is-primary" href="{% url 'entrada:new_entrada' %}">Novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Produto</th>
+            <th>Cor</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for entrada in entradas %}
+        <tr>
+            <th>{{ entrada.id }}</th>
+            <td>{{ entrada.produto }}</td>
+            <td>{{ entrada.cor }}</td>
+            <td>{{ entrada.preco }}</td>
+            <td>{{ entrada.quantidade }}</td>
+            <td><a class="button is-primary" href="{% url 'entrada:update_entrada' entrada.id %}">alterar</a></td>
+            <td><a class="button is-primary" href="{% url 'entrada:delete_entrada' entrada.id %}">deletar</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
