@@ -14,5 +14,5 @@ class Entradas(models.Model):
     class Meta:
         verbose_name = 'Entrada'
         verbose_name_plural = 'Entradas'
-        ordering = ['produto']
+        ordering = ['-produto']
     

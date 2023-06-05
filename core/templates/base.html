@@ -9,13 +9,14 @@
 
     <link rel="stylesheet" href="{% static 'css/bulma.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/jquery.dataTables.min.css' %}">
+    
 
 </head>
 <body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-black" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-          <a class="navbar-item" href="{% url 'index' %}">
-
+          <a class="img" href="{% url 'index' %}" >
+            <img src="{% static 'img/estoque.png' %}" width="80" >
           </a>
       
           <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -27,15 +28,13 @@
       
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-start">
-            <a class="navbar-item" href="{% url 'produto:list_produto' %}">
+            <a class="navbar-item is-spaced" href="{% url 'produto:list_produto' %}">
               Produto
             </a>
-      
-            <a class="navbar-item" href="{% url 'entrada:list_entrada' %}">
+            <a class="navbar-item is-spaced" href="{% url 'entrada:list_entrada' %}">
               Entrada
             </a>
-
-            <a class="navbar-item" href="{% url 'saida:list_saida' %}">
+            <a class="navbar-item is-spaced" href="{% url 'saida:list_saida' %}">
               Saída
             </a>
       
@@ -54,9 +53,6 @@
           </div>
         </div>
       </nav>
-    <div class="box">
-      <img src='{% static "img/logo.png" %}' width="150" >
-    </div>
     <div class="container">
       <div class="notification">
         {% block product %}{% endblock %}

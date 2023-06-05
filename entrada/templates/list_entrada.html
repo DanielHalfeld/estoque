@@ -2,10 +2,10 @@
 
 {% block product %}
 <p>
-    <a class="button is-primary" href="{% url 'index' %}">Início</a>
-    <a class="button is-primary" href="{% url 'produto:list_produto' %}">Lista de Produtos</a> <br><br>
+    <a class="button is-warning" href="{% url 'index' %}"><b>Início</b></a>
+    <a class="button is-warning" href="{% url 'produto:list_produto' %}"><b>Lista de Produtos</b></a> <br><br>
     <h1>Entrada</h1> 
-    <a class="button is-primary" href="{% url 'entrada:new_entrada' %}">Novo</a>
+    <a class="button is-warning" href="{% url 'entrada:new_entrada' %}"><b>Novo</b></a>
 </p>
 <table class="table">
     <thead>
@@ -26,8 +26,8 @@
             <td>{{ entrada.cor }}</td>
             <td>{{ entrada.preco }}</td>
             <td>{{ entrada.quantidade }}</td>
-            <td><a class="button is-primary" href="{% url 'entrada:update_entrada' entrada.id %}">alterar</a></td>
-            <td><a class="button is-primary" href="{% url 'entrada:delete_entrada' entrada.id %}">deletar</a></td>
+            <td><a class="button is-warning" href="{% url 'entrada:update_entrada' entrada.id %}"><b>alterar</b></a></td>
+            <td><a class="button is-warning" href="{% url 'entrada:delete_entrada' entrada.id %}"><b>deletar</b></a></td>
         </tr>
         {% endfor %}
     </tbody>
