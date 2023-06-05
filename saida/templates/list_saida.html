@@ -2,17 +2,16 @@
 
 {% block product %}
 <p>
-    <a class="button is-primary" href="{% url 'index' %}">Início</a>
-    <a class="button is-primary" href="{% url 'produto:list_produto' %}">Lista de Produtos</a> <br><br>
+    <a class="button is-warning" href="{% url 'index' %}"><b>Início</b></a>
+    <a class="button is-warning" href="{% url 'produto:list_produto' %}"><b>Lista de Produtos</b></a> <br><br>
     <h1>Saída</h1> 
-    <a class="button is-primary" href="{% url 'saida:new_saida' %}">Novo</a>
+    <a class="button is-warning" href="{% url 'saida:new_saida' %}"><b>Novo</b></a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>Id</th>
             <th>Produto</th>
-            <th>Cor</th>
             <th>Preço</th>
             <th>Quantidade</th>
             <th></th>
@@ -23,11 +22,10 @@
         <tr>
             <th>{{ saida.id }}</th>
             <td>{{ saida.produto }}</td>
-            <td>{{ saida.cor }}</td>
             <td>{{ saida.preco }}</td>
             <td>{{ saida.quantidade }}</td>
-            <td><a class="button is-primary" href="{% url 'saida:update_saida' saida.id %}">alterar</a></td>
-            <td><a class="button is-primary" href="{% url 'saida:delete_saida' saida.id %}">deletar</a></td>
+            <td><a class="button is-warning" href="{% url 'saida:update_saida' saida.id %}"><b>alterar</b></a></td>
+            <td><a class="button is-warning" href="{% url 'saida:delete_saida' saida.id %}"><b>deletar</b></a></td>
         </tr>
         {% endfor %}
     </tbody>

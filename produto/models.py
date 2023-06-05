@@ -14,7 +14,7 @@ class Produtos(models.Model):
 
     preco = models.DecimalField('Preço', decimal_places=2, max_digits=8, default=0)
 
-    quantidade = models.IntegerField('Quantidade', default=0)
+    quantidade = models.FloatField('Quantidade', default=0)
 
     criado = models.DateTimeField('Criado em', auto_now_add=True)
 
