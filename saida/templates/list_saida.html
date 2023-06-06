@@ -3,7 +3,8 @@
 {% block product %}
 <p>
     <a class="button is-warning" href="{% url 'index' %}"><b>Início</b></a>
-    <a class="button is-warning" href="{% url 'produto:list_produto' %}"><b>Lista de Produtos</b></a> <br><br>
+    <a class="button is-warning" href="{% url 'produto:list_produto' %}"><b>Lista de Produtos</b></a> 
+    <a class="button is-warning" href="{% url 'entrada:list_entrada' %}"><b>Lista de Entradas</b></a> <br><br>
     <h1>Saída</h1> 
     <a class="button is-warning" href="{% url 'saida:new_saida' %}"><b>Novo</b></a>
 </p>
