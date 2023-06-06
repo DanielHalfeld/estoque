@@ -1,12 +1,12 @@
 from django.shortcuts import render, redirect
-from .models import Entradas
+from .models import Entradas, Produtos
 from .forms import EntradaForm
 
 def list_entrada(request):
     entradas = Entradas.objects.all()
     template_name = 'list_entrada.html'
     context = {
-        'entradas': entradas, 
+        'entradas': entradas,
     }
     return render(request, template_name, context)
 

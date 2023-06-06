@@ -3,7 +3,8 @@
 {% block product %}
 <p>
     <a class="button is-warning" href="{% url 'index' %}"><b>Início</b></a>
-    <a class="button is-warning" href="{% url 'produto:list_produto' %}"><b>Lista de Produtos</b></a> <br><br>
+    <a class="button is-warning" href="{% url 'produto:list_produto' %}"><b>Lista de Produtos</b></a> 
+    <a class="button is-warning" href="{% url 'saida:list_saida' %}"><b>Lista de Saidas</b></a> <br><br>
     <h1>Entrada</h1> 
     <a class="button is-warning" href="{% url 'entrada:new_entrada' %}"><b>Novo</b></a>
 </p>
@@ -23,7 +24,7 @@
         <tr>
             <th>{{ entrada.id }}</th>
             <td>{{ entrada.produto }}</td>
-            <td>{{ entrada.cor }}</td>
+            <td>{{ entrada.cores }}</td>
             <td>{{ entrada.preco }}</td>
             <td>{{ entrada.quantidade }}</td>
             <td><a class="button is-warning" href="{% url 'entrada:update_entrada' entrada.id %}"><b>alterar</b></a></td>
