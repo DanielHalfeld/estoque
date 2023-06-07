@@ -23,7 +23,7 @@
         <tr>
             <th>{{ saida.id }}</th>
             <td>{{ saida.produto }}</td>
-            <td>{{ saida.preco }}</td>
+            <td>{{ saida.produto.preco }}</td>
             <td>{{ saida.quantidade }}</td>
             <td><a class="button is-warning" href="{% url 'saida:update_saida' saida.id %}"><b>alterar</b></a></td>
             <td><a class="button is-warning" href="{% url 'saida:delete_saida' saida.id %}"><b>deletar</b></a></td>
