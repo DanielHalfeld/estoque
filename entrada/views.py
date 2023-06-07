@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Entradas, Produtos
+from .models import Entradas
 from .forms import EntradaForm
 
 def list_entrada(request):

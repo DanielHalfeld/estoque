@@ -22,13 +22,13 @@
     <tbody>
         {% for entrada in entradas %}
         <tr>
-            <th>{{ entrada.id }}</th>
+            <td>{{ entrada.id }}</td>
             <td>{{ entrada.produto }}</td>
-            <td>{{ entrada.cores }}</td>
+            <td>{{ entrada.produto.cor }}</td>
             <td>{{ entrada.preco }}</td>
             <td>{{ entrada.quantidade }}</td>
             <td><a class="button is-warning" href="{% url 'entrada:update_entrada' entrada.id %}"><b>alterar</b></a></td>
-            <td><a class="button is-warning" href="{% url 'entrada:delete_entrada' entrada.id %}"><b>deletar</b></a></td>
+            <td><a class="button is-warning" href="{% url 'entrada:delete_entrada' entrada.id %}"><b>deletar</b></a></td>       
         </tr>
         {% endfor %}
     </tbody>

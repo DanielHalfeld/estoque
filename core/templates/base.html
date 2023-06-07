@@ -6,11 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>estoqueWeb</title>
-
     <link rel="stylesheet" href="{% static 'css/bulma.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/jquery.dataTables.min.css' %}">
-    
-
 </head>
 <body>
     <nav class="navbar is-black" role="navigation" aria-label="main navigation">
@@ -25,9 +22,9 @@
             <span aria-hidden="true"></span>
           </a>
         </div>
-      
         {% block navmenu %}{% endblock %}
       </nav>
+      
     <div class="container">
       <div class="notification">
         {% block product %}{% endblock %}
